@@ -9,7 +9,7 @@ public class ExcelReaderOldFormatTest {
 	@Test
 	public void testReaderExcelSheet() {
 		ExcelReaderOldFormat excelReader = new ExcelReaderOldFormat();
-		excelReader.readerExcelSheet();
+		excelReader.readerExcelSheet("/home/a152119/share/", "SOURCE.xls");
 	}
 
 }

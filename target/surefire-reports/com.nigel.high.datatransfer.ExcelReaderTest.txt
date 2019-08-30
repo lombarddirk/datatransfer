@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.nigel.high.datatransfer.ExcelReaderTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.106 s <<< FAILURE! - in com.nigel.high.datatransfer.ExcelReaderTest
-testReaderExcelSheet(com.nigel.high.datatransfer.ExcelReaderTest)  Time elapsed: 0.077 s  <<< ERROR!
-org.apache.poi.openxml4j.exceptions.OLE2NotOfficeXmlFileException: The supplied data appears to be in the OLE2 Format. You are calling the part of POI that deals with OOXML (Office Open XML) Documents. You need to call a different part of POI to process this data (eg HSSF instead of XSSF)
-	at com.nigel.high.datatransfer.ExcelReaderTest.testReaderExcelSheet(ExcelReaderTest.java:12)
-

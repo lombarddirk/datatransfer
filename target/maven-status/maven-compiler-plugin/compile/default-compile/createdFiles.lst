@@ -1,3 +1,6 @@
+com/nigel/high/datatransfer/ExcelUpdater.class
+com/nigel/high/datatransfer/ExcelUpdaterOldFormat.class
+com/nigel/high/datatransfer/ExcelReaderOldFormat.class
 com/nigel/high/datatransfer/SpringBootStandaloneApplication.class
 com/nigel/high/datatransfer/DefaultHelloService.class
 com/nigel/high/datatransfer/HelloService.class

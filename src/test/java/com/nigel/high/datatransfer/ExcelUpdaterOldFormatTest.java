@@ -21,9 +21,9 @@ public class ExcelUpdaterOldFormatTest {
 	@Test
 	public void testUpdateExcelSheet() {
 		ExcelReaderOldFormat excelReaderOldFormat = new ExcelReaderOldFormat();
-		HashMap<String, ReaderPOJO> dataFromSpreadsheet = excelReaderOldFormat.readerExcelSheet();
+		HashMap<String, ReaderPOJO> dataFromSpreadsheet = excelReaderOldFormat.readerExcelSheet("/home/a152119/share/", "SOURCE.xls");
 		ExcelUpdaterOldFormat excelUpdaterOldFormat = new ExcelUpdaterOldFormat();
-		excelUpdaterOldFormat.updateExcelSheet(dataFromSpreadsheet, "Term 3  2019");
+		excelUpdaterOldFormat.updateExcelSheet(dataFromSpreadsheet, "Term 3  2019", "/home/a152119/share/", "Target.xls");
 	}
 
 }

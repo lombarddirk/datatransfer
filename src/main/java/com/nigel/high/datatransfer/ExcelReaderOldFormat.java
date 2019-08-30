@@ -23,12 +23,12 @@ public class ExcelReaderOldFormat {
 
 	private static final String FILE_NAME = "/home/a152119/share/SOURCE.xls";
 
-	public HashMap<String, ReaderPOJO> readerExcelSheet() {
+	public HashMap<String, ReaderPOJO> readerExcelSheet(String pathOfSourceFile, String sourceFileName) {
 
 		HashMap<String, ReaderPOJO> dataFromSpreadsheet = null;
 		try {
 
-			FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
+			FileInputStream excelFile = new FileInputStream(new File(pathOfSourceFile + sourceFileName));
 			HSSFWorkbook workbook = new HSSFWorkbook(excelFile);
 			HSSFSheet datatypeSheet = workbook.getSheetAt(0);
 			Iterator<Row> iterator = datatypeSheet.iterator();

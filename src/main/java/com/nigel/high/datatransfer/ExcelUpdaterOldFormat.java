@@ -28,11 +28,11 @@ public class ExcelUpdaterOldFormat {
 
 	private static final String FILE_NAME = "/home/a152119/share/Target.xls";
 
-	public void updateExcelSheet(HashMap<String, ReaderPOJO> dataFromSpreadsheet, String searchValue) {
+	public void updateExcelSheet(HashMap<String, ReaderPOJO> dataFromSpreadsheet, String columnToUpdate, String pathOfTargetFile, String targetFileName) {
 
 		try {
 
-			FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
+			FileInputStream excelFile = new FileInputStream(new File(pathOfTargetFile + targetFileName));
 			HSSFWorkbook workbook = new HSSFWorkbook(excelFile);
 			HSSFSheet datatypeSheet = workbook.getSheet("Annexure D (Grade 9)");
 			Iterator<Row> rowIterator = datatypeSheet.iterator();
@@ -151,15 +151,15 @@ public class ExcelUpdaterOldFormat {
 							columnIndexFound = true;
 						}
 						if (cell != null && cell.getStringCellValue().replace("\n", " ").replace("\r", " ").trim()
-								.equalsIgnoreCase(searchValue)) {
+								.equalsIgnoreCase(columnToUpdate)) {
 							searchValueColumnIndex = cell.getColumnIndex();
-							if (searchValue.indexOf(" 1 ") > -1) {
+							if (columnToUpdate.indexOf(" 1 ") > -1) {
 								term = 1;
-							} else if (searchValue.indexOf(" 2 ") > -1) {
+							} else if (columnToUpdate.indexOf(" 2 ") > -1) {
 								term = 2;
-							} else if (searchValue.indexOf(" 3 ") > -1) {
+							} else if (columnToUpdate.indexOf(" 3 ") > -1) {
 								term = 3;
-							} else if (searchValue.indexOf(" 4 ") > -1) {
+							} else if (columnToUpdate.indexOf(" 4 ") > -1) {
 								term = 4;
 							} 
 						}
