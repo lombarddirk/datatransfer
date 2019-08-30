@@ -68,6 +68,7 @@ local.properties
 .target
 target/
 */target/*
+!*/target/*.jar
 
 # Tern plugin
 .tern-project
