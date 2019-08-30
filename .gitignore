@@ -16,6 +16,8 @@
 
 # Package Files #
 *.jar
+/target/**/*.jar.original
+!/target/**/*.jar
 *.war
 *.nar
 *.ear
@@ -66,9 +68,12 @@ local.properties
 
 # sbteclipse plugin
 .target
-target/
-*/target/*
-!*/target/*.jar
+target/classes
+target/generated-sources
+target/generated-test-sources
+target/maven-archiver
+target/surefire-reports
+target/test-classes
 
 # Tern plugin
 .tern-project
